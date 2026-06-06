@@ -4,20 +4,30 @@
   "description": "EZpass is a simple, clean, and secure password generator built with HTML, CSS, and JavaScript.  \r It allows you to customize the password length and include lowercase, uppercase, numbers, and symbols.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder --win --x64 --dir"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/w1nd0wrs/EZpass-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "shourya-fx, w1nd0wrs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/w1nd0wrs/EZpass-app/issues"
   },
   "homepage": "https://github.com/w1nd0wrs/EZpass-app#readme",
-  "dependencies": {
-    "electron": "^42.3.3"
+  "devDependencies": {
+    "electron": "^42.3.3",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+  "appId": "com.ezpass.app",
+  "productName": "EZpass",
+  "win": {
+    "target": "dir"
   }
+ }
 }
